@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@color/c2"
+    android:paddingLeft="15dp"
+    android:layout_gravity="left"
+    android:layout_width="match_parent"
+    android:layout_height="200dp">
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:orientation="vertical"
+        android:gravity="center_vertical"
+        android:layout_height="match_parent">
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/image_avata"
+            android:layout_width="120dp"
+            android:contentDescription="Navigation header"
+            android:layout_height="120dp"
+            android:src="@drawable/order"
+            android:elevation="6dp"
+            app:civ_border_width="6dp"
+            app:civ_border_color="@color/c1" />
+        <TextView
+            android:id="@+id/txt_user"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VinhHoang"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="#fff"
+            android:textStyle="bold"/>
+        <TextView
+            android:id="@+id/txt_phone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="VinhHoang"
+            android:textSize="14dp"
+            android:gravity="center"
+            android:layout_marginTop="10dp"
+            android:textColor="#fff"
+            android:textStyle="bold"/>
+    </LinearLayout>
+</LinearLayout>

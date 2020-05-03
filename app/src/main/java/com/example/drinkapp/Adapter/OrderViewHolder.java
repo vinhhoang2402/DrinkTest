@@ -1,0 +1,35 @@
+package com.example.drinkapp.Adapter;
+
+import android.view.View;
+import android.widget.TextView;
+
+import androidx.annotation.NonNull;
+import androidx.recyclerview.widget.RecyclerView;
+
+import com.example.drinkapp.Interface.IItemClickListenner;
+import com.example.drinkapp.R;
+
+public class OrderViewHolder extends RecyclerView.ViewHolder implements View.OnClickListener {
+    IItemClickListenner iItemClickListenner;
+
+    public void setiItemClickListenner(IItemClickListenner iItemClickListenner) {
+        this.iItemClickListenner = iItemClickListenner;
+    }
+
+    public TextView txt_order_id,txt_order_price,txt_order_address,txt_order_status,txt_order_date;
+    public OrderViewHolder(@NonNull View itemView) {
+        super(itemView);
+        txt_order_price=itemView.findViewById(R.id.txt_order_prices);
+        txt_order_id=itemView.findViewById(R.id.txt_order_id);
+        txt_order_address=itemView.findViewById(R.id.txt_order_address);
+        txt_order_date=itemView.findViewById(R.id.txt_order_date);
+        txt_order_status=itemView.findViewById(R.id.txt_order_status);
+
+        itemView.setOnClickListener(this);
+
+    }
+    @Override
+    public void onClick(View view) {
+        iItemClickListenner.onclick(view);
+    }
+}

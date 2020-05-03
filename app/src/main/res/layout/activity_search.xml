@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="8dp"
+    android:background="@drawable/bg"
+    tools:context=".SearchActivity">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <com.mancj.materialsearchbar.MaterialSearchBar
+            android:id="@+id/search_bar"
+            style="@style/MaterialSearchBarLight"
+            app:mt_speechMode="false"
+            app:mt_hint="Enter your drink"
+            android:layout_alignParentTop="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </com.mancj.materialsearchbar.MaterialSearchBar>
+        <androidx.recyclerview.widget.RecyclerView
+            android:layout_below="@+id/search_bar"
+            android:scrollbars="vertical"
+            android:id="@+id/recycler_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
