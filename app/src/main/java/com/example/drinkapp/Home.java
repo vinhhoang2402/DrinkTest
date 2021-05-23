@@ -199,7 +199,7 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
             startActivity(new Intent(Home.this,FavoriteActivity.class));
             return true;
         }else  if(id==R.id.location) {
-            startActivity(new Intent(Home.this, Location.class));
+            startActivity(new Intent(Home.this, Map.class));
             return true;
         }
         navigationView.setItemIconTintList(null);
@@ -338,9 +338,6 @@ public class Home extends AppCompatActivity implements NavigationView.OnNavigati
     @Override
     public boolean onNavigationItemSelected(@NonNull MenuItem menuItem) {
         switch (menuItem.getItemId()){
-            case R.id.profile:
-
-                break;
             case R.id.home:
                 startActivity(new Intent(Home.this,FavoriteActivity.class));
                 break;

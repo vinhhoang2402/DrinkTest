@@ -51,7 +51,7 @@ public class OrderDetailAdapter extends RecyclerView.Adapter<OrderDetailAdapter.
 
         //get price
         // DecimalFormat decimalFormat=new DecimalFormat("###,###,###");
-        holder.txt_price.setText(new StringBuilder("$").append(cartList.get(position).price));
+        holder.txt_price.setText(new StringBuilder("").append(cartList.get(position).price).append("đ"));
 
 
     }

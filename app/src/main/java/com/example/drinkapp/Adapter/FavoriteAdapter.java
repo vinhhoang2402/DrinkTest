@@ -41,7 +41,7 @@ public class FavoriteAdapter extends RecyclerView.Adapter<FavoriteAdapter.Favori
                 .placeholder(R.drawable.bg)
                 .into(holder.image_product);
         holder.txt_name.setText(favoriteList.get(position).name);
-        holder.txt_price.setText(new StringBuilder("$").append(favoriteList .get(position).price));
+        holder.txt_price.setText(new StringBuilder("").append(favoriteList .get(position).price).append("đ"));
 
     }
 

@@ -44,23 +44,17 @@ public class MainActivity extends AppCompatActivity {
     private static final int REQUEST_PERMISSION=1001;
     IDrinkShopAPI mService;
     MaterialEditText edt_name,edt_address,edt_birthdate;
-
-
-
-
     @Override
     protected void onStart() {
         super.onStart();
         firebaseAuth.addAuthStateListener(listener);
     }
-
     @Override
     protected void onStop() {
         if (listener!=null)
             firebaseAuth.removeAuthStateListener(listener);
         super.onStop();
     }
-
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -134,9 +128,7 @@ public class MainActivity extends AppCompatActivity {
 
                             @Override
                             public void onFailure(Call<CheckUserResponse> call, Throwable t) {
-
-
-
+                                Toast.makeText(MainActivity.this, t.getMessage(), Toast.LENGTH_SHORT).show();
                             }
                         });
 
@@ -146,13 +138,6 @@ public class MainActivity extends AppCompatActivity {
         Anhxa();
 
     }
-
-
-
-    private void UpdateTokenToServer() {
-
-    }
-
     private void showRegisterDialog(final String phone) {
         AlertDialog.Builder builder= new AlertDialog.Builder(MainActivity.this);
         builder.setTitle("REGISTER");

@@ -1,8 +1,6 @@
 package com.example.drinkapp;
 
 import android.Manifest;
-import android.graphics.Bitmap;
-import android.graphics.drawable.BitmapDrawable;
 import android.os.Bundle;
 import android.os.Looper;
 import android.widget.Toast;
@@ -18,7 +16,6 @@ import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
-import com.google.android.gms.maps.model.BitmapDescriptorFactory;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.karumi.dexter.Dexter;
@@ -71,7 +68,7 @@ public class Location extends FragmentActivity implements OnMapReadyCallback {
 
                     }
                 }).check();
-        
+        //MapsInitializer.initialize(getApplicationContext());
     }
 
     private void buildLocationCallBack() {
@@ -79,14 +76,10 @@ public class Location extends FragmentActivity implements OnMapReadyCallback {
             @Override
             public void onLocationResult(LocationResult locationResult) {
                 super.onLocationResult(locationResult);
-                int height = 200;
-                int width = 150;
-                BitmapDrawable bitmapdraw = (BitmapDrawable)getResources().getDrawable(R.mipmap.drink);
-                Bitmap b = bitmapdraw.getBitmap();
-                Bitmap smallMarker = Bitmap.createScaledBitmap(b, width, height, false);
-               LatLng your_location=new LatLng(locationResult.getLastLocation().getLatitude(),locationResult.getLastLocation().getLongitude());
-                mMap.addMarker(new MarkerOptions().position(your_location).title("DrinkShop") .icon(BitmapDescriptorFactory.fromBitmap(smallMarker)));
-                mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(your_location,17));
+
+               LatLng your_location=new LatLng(18.654597, 105.689972);
+                mMap.addMarker(new MarkerOptions().position(your_location).title("DrinkShop"));
+                mMap.animateCamera(CameraUpdateFactory.newLatLngZoom(your_location,17));
             }
         };
 

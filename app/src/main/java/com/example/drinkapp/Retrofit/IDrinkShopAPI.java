@@ -59,11 +59,11 @@ public interface IDrinkShopAPI {
                              @Field("address") String address,
                              @Field("phone") String phone);
 
-    @FormUrlEncoded
-    @POST("braintree/checkout.php")
-    Call<String> payment(@Field("nonce") String nonce,
-                             @Field("amount") String amount);
-
+//    @FormUrlEncoded
+//    @POST("braintree/checkout.php")
+//    Call<String> payment(@Field("nonce") String nonce,
+//                             @Field("amount") String amount);
+//
 
     @FormUrlEncoded
     @POST("get_order.php")

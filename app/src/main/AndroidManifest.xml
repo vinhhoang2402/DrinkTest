@@ -22,7 +22,8 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".ShowOrderActivity"></activity>
+        <activity android:name=".Map"></activity>
+        <activity android:name=".ShowOrderActivity" />
         <activity android:name=".OrderDetailActivity" />
 
         <meta-data

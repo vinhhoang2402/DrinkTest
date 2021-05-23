@@ -47,7 +47,7 @@ public class DrinkAdapter extends RecyclerView.Adapter<DrinkViewHolder> {
 
     @Override
     public void onBindViewHolder(@NonNull final DrinkViewHolder holder, final int position) {
-        holder.txt_Price.setText(new StringBuilder("$").append(drinks.get(position).Price));
+        holder.txt_Price.setText(new StringBuilder("").append(drinks.get(position).Price).append("đ"));
         holder.txt_Name.setText(drinks.get(position).Name);
         holder.btn_cart.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -283,7 +283,7 @@ public class DrinkAdapter extends RecyclerView.Adapter<DrinkViewHolder> {
         textView_sugar.setText(new StringBuilder("Sugar:").append(Common.sugar).append("%").toString());
         double price=(Double.parseDouble(drinks.get(position).Price)*Double.parseDouble(number))+Common.toppingPrice;
         if(Common.sizeOfCup==1)
-            price+=(3.0*Double.parseDouble(number));
+            price+=(3000*Double.parseDouble(number));
 
 
         StringBuilder topping_final_comment=new StringBuilder();

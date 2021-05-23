@@ -16,8 +16,8 @@ import java.util.List;
 
 public class Common {
     public static final String BASE_URL = "http://drinkshops.000webhostapp.com/drinkshop/";
-    //public static final String BASE_URL = "http://10.8.9.103/drinkshop/";
-    public static final String API_TOKEN_URL = "http://drinkshops.000webhostapp.com/drinkshop/braintree/main.php";
+    //public static final String BASE_URL = "http://192.168.43.122/drinkshop/";
+    //public static final String API_TOKEN_URL = "http://drinkshops.000webhostapp.com/drinkshop/braintree/main.php";
     public static final String TOPPING_MENU_ID="12";
     public static Double toppingPrice=0.0;
     public static int sizeOfCup=-1;

@@ -54,6 +54,7 @@ public class DrinkActivity extends AppCompatActivity {
                         displayDrinkList(drinks);
                     }
                 }));
+
     }
 
     private void displayDrinkList(List<Drink> drinks) {

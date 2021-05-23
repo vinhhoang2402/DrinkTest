@@ -44,7 +44,8 @@ public class OrderDetailActivity extends AppCompatActivity {
         btn_cancel.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                cancelOrder();
+                    cancelOrder();
+
             }
         });
 
@@ -64,22 +65,24 @@ public class OrderDetailActivity extends AppCompatActivity {
     }
 
     private void cancelOrder() {
-        IDrinkShopAPI drinkShopAPI=Common.getAPI();
-        drinkShopAPI.cancelOrder(String.valueOf(Common.currentOrder.getOderId()),
-                Common.currentUser.getPhone())
-                .enqueue(new Callback<String>() {
-                    @Override
-                    public void onResponse(Call<String> call, Response<String> response) {
-                        Toast.makeText(OrderDetailActivity.this, response.body(), Toast.LENGTH_SHORT).show();
-                        if(response.body().contains("Don hang da bi huy"))
-                        finish();
-                    }
+        if(Common.currentOrder.getOrderStatus()==0) {
+            IDrinkShopAPI drinkShopAPI = Common.getAPI();
+            drinkShopAPI.cancelOrder(String.valueOf(Common.currentOrder.getOderId()),
+                    Common.currentUser.getPhone())
+                    .enqueue(new Callback<String>() {
+                        @Override
+                        public void onResponse(Call<String> call, Response<String> response) {
+                            Toast.makeText(OrderDetailActivity.this, response.body(), Toast.LENGTH_SHORT).show();
+                            if (response.body().contains("Don hang da bi huy"))
+                                finish();
+                        }
 
-                    @Override
-                    public void onFailure(Call<String> call, Throwable t) {
-                        Log.d("DEBUG",t.getMessage());
-                    }
-                });
+                        @Override
+                        public void onFailure(Call<String> call, Throwable t) {
+                            Log.d("DEBUG", t.getMessage());
+                        }
+                    });
+        }
     }
 
     private void displayOrderDetail() {

@@ -15,11 +15,11 @@
       },
       "oauth_client": [
         {
-          "client_id": "116069799722-0eig7419i6lhmob7d4q6pe24ikj5dn63.apps.googleusercontent.com",
+          "client_id": "116069799722-4ako3kt733el1fea3md84co8418ua2ld.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
             "package_name": "com.example.auth",
-            "certificate_hash": "105f2244b2961a5636052fbf48e3aac1e127262c"
+            "certificate_hash": "667351e8f656c08d4cae061b1d3d3134ebee8505"
           }
         },
         {
@@ -51,6 +51,22 @@
         }
       },
       "oauth_client": [
+        {
+          "client_id": "116069799722-79ca1a8ro6iu6e7tf0jsj3i7tmj3mabe.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.drinkapp",
+            "certificate_hash": "8ca712d02f3e42529c605818bd91c64dd9db9fdf"
+          }
+        },
+        {
+          "client_id": "116069799722-hm5chkvu301mblrlln5jota93ffqmdea.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.drinkapp",
+            "certificate_hash": "14ecc9cb9cdd76c698bd4ae7c7a779c1116db930"
+          }
+        },
         {
           "client_id": "116069799722-l14tq4078av6r7hq4ln0t1kh9bcrse9v.apps.googleusercontent.com",
           "client_type": 1,

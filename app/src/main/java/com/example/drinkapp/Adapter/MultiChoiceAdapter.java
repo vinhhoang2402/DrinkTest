@@ -15,7 +15,6 @@ import com.example.drinkapp.R;
 import com.example.drinkapp.Utils.Common;
 import com.example.drinkapp.models.Drink;
 
-import java.util.ConcurrentModificationException;
 import java.util.List;
 
 public class MultiChoiceAdapter extends RecyclerView.Adapter<MultiChoiceAdapter.MultiChoiceHolder>  {
@@ -38,7 +37,7 @@ public class MultiChoiceAdapter extends RecyclerView.Adapter<MultiChoiceAdapter.
     @Override
     public void onBindViewHolder(@NonNull MultiChoiceHolder holder, final int position) {
         holder.checkBox.setText(optionList.get(position).Name);
-        holder.txttopping.setText(new StringBuilder(optionList.get(position).Price).append("$") );
+        holder.txttopping.setText(new StringBuilder(optionList.get(position).Price).append("đ") );
 
         holder.checkBox.setOnCheckedChangeListener(new CompoundButton.OnCheckedChangeListener() {
             @Override

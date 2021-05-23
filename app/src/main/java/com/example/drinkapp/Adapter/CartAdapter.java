@@ -18,6 +18,7 @@ import com.example.drinkapp.R;
 import com.example.drinkapp.Utils.Common;
 import com.squareup.picasso.Picasso;
 
+import java.text.DecimalFormat;
 import java.util.List;
 
 public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder> {
@@ -53,8 +54,8 @@ public class CartAdapter extends RecyclerView.Adapter<CartAdapter.CartViewHolder
 
         //get price
         final double priceOneCup=cartList.get(position).price/cartList.get(position).amount;
-       // DecimalFormat decimalFormat=new DecimalFormat("###,###,###");
-        holder.txt_price.setText(new StringBuilder("$").append(cartList.get(position).price));
+        DecimalFormat decimalFormat=new DecimalFormat("###,###,###");
+        holder.txt_price.setText(decimalFormat.format(cartList.get(position).price)+"đ");
         holder.btn_sl.setNumber(String.valueOf(cartList.get(position).amount));
         holder.btn_sl.setOnValueChangeListener(new ElegantNumberButton.OnValueChangeListener() {
             @Override
